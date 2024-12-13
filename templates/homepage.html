@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brit's Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static '../static/css/style.css' %}" type="text/css">
+</head>
+<body>
+    <div class="landing">
+        <header>
+            <a href="{% url 'homepage' %}" id="logo"><i class="fa-solid fa-cloud-bolt"></i>G.O.A.T</a>
+            <nav>
+                <a href="{% url 'homepage' %}">Home</a>
+                <a href="{% url 'clientlogin' %}">Client</a>
+                <a href="{% url 'client_list' %}">Management</a>
+                <a href="https://shiash.com/">About Us</a>
+            </nav>
+        </header>
+        <div class="maintext">
+            <div class="line1">
+                PLAN.EXECUTION.ATTAIN.
+            </div>
+
+            <div class="line2">
+                If You Want To Crack The System!..Understand The System!!
+            </div>
+
+            <a href="{% url 'clientlogin' %}"><button type="submit">Let's Start</button></a>
+        </div>
+    </div>
+</body>
+</html>
+

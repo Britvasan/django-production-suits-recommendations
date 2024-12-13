@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Client List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '../static/css/style2.css' %}" type="text/css">
+</head>
+<body>
+    <h2>Client Orders</h2>
+    <table>
+        <tr>
+            <th>Client Name</th>
+            <th>Order</th>
+            <th>Order Type</th>
+            <th>Customization</th>
+            <th>Quantity</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+        {% for client in value %}
+        <tr>
+            <td>{{ client.client_name }}</td>
+            <td>{{ client.orders }}</td>
+            <td>{{ client.order_type }}</td>
+            <td>{{ client.customization }}</td>
+            <td>{{ client.quantity }}</td>
+            <td>{{ client.status }}</td>
+            <td><a href="{% url 'update_status' client.id %}">Update Status</a></td>
+            <td><a href="{% url 'delete_client' client.id %}">Delete Data</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
+
+
+

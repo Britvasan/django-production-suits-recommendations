@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Status</title>
+</head>
+<body>
+<center>
+    <h2>Update Status for {{ client.client_name }}</h2>
+    <form method="post" action="{% url 'update_status' client.id %}">
+        {% csrf_token %}
+        <label for="status">Status:</label>
+        <input type="text" name="status" value="{{ client.status }}" required><br>
+        <button type="submit">Update</button>
+    </form>
+</center>
+</body>
+</html>
+

@@ -1,0 +1,165 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main landing section styling */
+.landing {
+    background: url("../images/h_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    color: aliceblue;
+}
+
+/* Header links and logo */
+header a {
+    text-decoration: none;
+    color: orange;
+    display: flex;
+}
+
+header i {
+    margin-right: 10px;
+}
+
+header {
+    display: flex;
+    padding: 20px;
+}
+
+#logo {
+    flex: 3;
+    font-size: 30px;
+    cursor: default;
+}
+
+nav {
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav a {
+    padding: 10px;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: red;
+    transform: scale(1.18);  
+}
+
+/* Main text section */
+.maintext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    height: 50vh;
+    cursor: default;
+}
+
+.line1 {
+    font-size: 2.5em;
+    font-weight: bolder;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+    color: lightsalmon;
+    text-align: center;
+}
+
+.line2 {
+    font-size: 1.5em;
+    font-weight: lighter;
+    color: rgb(241, 255, 47);
+    text-align: center;
+}
+
+.maintext div {
+    margin-top: 25px;
+}
+
+.maintext button {
+    width: auto;
+    max-width: 200px; /* Limit button width */
+    margin-top: 40px;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 22px;
+    background-color: #4caf50;
+    color: white;
+    border: 1px solid #4caf50;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.maintext button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.maintext button:active {
+    background-color: #3e8e41;
+    transform: scale(0.98);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 580px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 18px; /* Reduce font size for mobile */
+        padding: 8px;
+    }
+
+    .maintext {
+        padding: 15px;
+        height: auto;
+    }
+
+    .line1 {
+        font-size: 1.8em; /* Smaller font for mobile */
+    }
+
+    .line2 {
+        font-size: 1.2em; /* Adjust font for smaller screens */
+    }
+
+    .maintext button {
+        width: 80%; /* Make the button more adaptive on smaller screens */
+        font-size: 18px; /* Adjust button text size */
+    }
+}
+
+/* Media query for even smaller screens (below 400px) */
+@media (max-width: 400px) {
+    .line1 {
+        font-size: 1.5em; /* Further reduce font size */
+    }
+
+    .line2 {
+        font-size: 1em;
+    }
+
+    .maintext button {
+        width: 100%; /* Full width for very small screens */
+    }
+
+    nav a {
+        font-size: 16px; /* Further reduce nav link size */
+    }
+}
